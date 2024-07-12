@@ -267,6 +267,7 @@ h6 {
 }
 /* #endregion */
 
+/* #region Bot */
 .bot {
   display: flex;
   flex-direction: column;
@@ -302,4 +303,19 @@ h6 {
   color: var(--gray-gray-0);
   width: 562px;
   height: 104px;
- }
+}
+/* #endregion */
+
+/* #region Footer */
+.footer__box {
+  width: 1920px;
+  height: 193px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__list {
+  display: inline-flex;
+  flex-direction: row;
+}
+/* #endregion */
