@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>TON</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrapper">
+      <!-- #region Header -->
       <header class="header">
         <div class="header__row">
           <div class="header__logo">
@@ -29,114 +36,125 @@
           </div>
         </div>
       </header>
+      <!-- #endregion -->
       <main>
-        <section class="trading">
-          <div class="trading__row">
-            <div class="trading__block">
-              <h1 class="trading__title">
-                The future of trading <span>is here</span>
-              </h1>
-              <p class="trading__text">
-                Join the future of trading with with a trading bot from the
-                Durov brothers trading bot from the trading bot from the.
-              </p>
-              <div class="trading__button-group">
-                <div class="header__logo_button">
-                  <a href="#">
-                    <img src="./img//Buttons.png" alt="button try now" />
-                  </a>
+        <!-- #region Trading -->
+        <div>
+          <section class="trading">
+            <div class="trading__row">
+              <div class="trading__block">
+                <h1 class="trading__title">
+                  The future of trading <span>is here</span>
+                </h1>
+                <p class="trading__text">
+                  Join the future of trading with with a trading bot from the
+                  Durov brothers trading bot from the trading bot from the.
+                </p>
+                <div class="trading__button-group">
+                  <div class="header__logo_button">
+                    <a href="#">
+                      <img src="./img//Buttons.png" alt="button try now" />
+                    </a>
+                  </div>
+                  <ul class="trading__list">
+                    <li>
+                      <img
+                        src="./img/Last.png"
+                        alt="follower"
+                        width="62"
+                        height="62"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="./img/Medium.png"
+                        alt="follower"
+                        width="62"
+                        height="62"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="./img/Front.png"
+                        alt="follower"
+                        width="62"
+                        height="62"
+                      />
+                    </li>
+                    <p>16k</p>
+                    <p>Users</p>
+                  </ul>
                 </div>
-                <ul class="trading__list">
-                  <li>
-                    <img
-                      src="./img/Last.png"
-                      alt="follower"
-                      width="62"
-                      height="62"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="./img/Medium.png"
-                      alt="follower"
-                      width="62"
-                      height="62"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="./img/Front.png"
-                      alt="follower"
-                      width="62"
-                      height="62"
-                    />
-                  </li>
-                  <p>16k</p>
-                  <p>Users</p>
-                </ul>
               </div>
-            </div>
-            <div class="trading__video">
-              <img src="./img/Video.png" alt="" srcset="">
-              <!-- <p>VIDEO</p> -->
-              <!-- todo <video width="320" height="240" controls>
+              <div class="trading__video">
+                <img src="./img/Video.png" alt="" srcset="" />
+                <!-- <p>VIDEO</p> -->
+                <!-- todo <video width="320" height="240" controls>
                 <source src="movie.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
                 Your browser does not support the video tag.
               </video> -->
-              <!--  TODO <video src="#"></video>-->
-              <!-- todo <p class="text-video">About TON trading bot</p> -->
+                <!--  TODO <video src="#"></video>-->
+                <!-- todo <p class="text-video">About TON trading bot</p> -->
+              </div>
             </div>
-          </div>
-        </section>
-        <section>
-          <h2>How to start?</h2>
-          <p>
-            Start earning in just a few simple steps. Trading has never been
-            easier!
-          </p>
-          <ul>
-            <li>
-              <img
-                src="./img/icons/Icon-1.svg"
-                alt="sign up button"
-                width="56"
-                height="56"
-              />
-              <h3>Sign up</h3>
-              <p>
-                Register on the website and a company representative will
-                contact you shortly.
-              </p>
-            </li>
-            <li>
-              <img
-                src="./img/icons/Icon-2.svg"
-                alt="top up button"
-                width="56"
-                height="56"
-              />
-              <p>
-                To activate the autotrading algorithm or develop a strategy
-                together with a financial expert.
-              </p>
-              <h3>Top up</h3>
-            </li>
-            <li>
-              <img
-                src="./img/icons/Icon.svg"
-                alt="get profit button"
-                width="56"
-                height="56"
-              />
-              <p>
-                Profit from the advanced technologies of the creator of
-                Telegram, VK, TON."
-              </p>
-              <h3>Get profit</h3>
-            </li>
-          </ul>
-        </section>
+          </section>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region Start -->
+        <div>
+          <section class="start">
+            <h2 class="start-title">How to start?</h2>
+            <p class="start-title-text">
+              Start earning in just a few simple steps. Trading has never been
+              easier!
+            </p>
+            <ul class="start-list">
+              <li class="start-item">
+                <img
+                  src="./img/icons/Icon-1.svg"
+                  alt="sign up button"
+                  width="56"
+                  height="56"
+                />
+                <h3 class="start-subtitle">Sign up</h3>
+                <p class="start-item-text">
+                  Register on the website and a company representative will
+                  contact you shortly.
+                </p>
+              </li>
+              <li class="start-item">
+                <img
+                  src="./img/icons/Icon-2.svg"
+                  alt="top up button"
+                  width="56"
+                  height="56"
+                />
+                <p class="start-item-text">
+                  To activate the autotrading algorithm or develop a strategy
+                  together with a financial expert.
+                </p>
+                <h3 class="start-subtitle">Top up</h3>
+              </li>
+              <li class="start-item">
+                <img
+                  src="./img/icons/Icon.svg"
+                  alt="get profit button"
+                  width="56"
+                  height="56"
+                />
+                <p class="start-item-text">
+                  Profit from the advanced technologies of the creator of
+                  Telegram, VK, TON."
+                </p>
+                <h3 class="start-subtitle">Get profit</h3>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <!-- #endregion -->
+
         <section>
           <h2>Try Durov`s trading bot and earn right now</h2>
           <img
