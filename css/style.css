@@ -1,4 +1,5 @@
 :root {
+  box-sizing: border-box;
   --gray-gray-0: #fff;
   --gray-gray-100: #f7f7f7;
   --gray-gray-400: #cacaca;
@@ -9,6 +10,12 @@
   --error-error-red: #f04438;
   --error-error-light-red: #fda29b;
   --font-family: "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /* #region Обнуление*/
