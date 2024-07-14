@@ -18,11 +18,6 @@
   box-sizing: inherit;
 }
 
-.container {
-  width: 1440px;
-  margin: 0 auto;
-}
-
 h1,
 h2,
 h3,
@@ -132,6 +127,9 @@ h6 {
   align-items: center;
   padding: 32px 240px 12px 240px;
   margin-bottom: 72px;
+}
+
+.header__logo {
 }
 
 .header__logo > img {
