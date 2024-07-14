@@ -330,15 +330,27 @@ h6 {
 /* #endregion */
 
 /* #region Footer */
-.footer__box {
+.footer {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.footer__row {
   width: 1920px;
   height: 193px;
+  margin-bottom: 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__block {
   display: flex;
   flex-direction: column;
 }
 
+.footer__logo {
+}
 .footer__list {
-  display: flex;
-  flex-direction: row;
 }
 /* #endregion */
