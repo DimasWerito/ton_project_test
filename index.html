@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    < class="wrapper">
+    <div class="wrapper">
       <!-- #region Header -->
       <header class="header">
         <div class="header__row">
@@ -44,7 +44,7 @@
         </div>
       </header>
       <!-- #endregion -->
-      <main>
+      <main class="content">
         <!-- #region Trading -->
         <section class="trading">
           <div class="trading__row">
@@ -192,9 +192,11 @@
       </main>
 
       <!-- #region Footer -->
-        <footer class="footer">
-          <div class="footer__row">
-            <div class="footer__block">
+      <footer class="footer">
+        <div class="footer__line"></div>
+        <div class="footer__row">
+          <div class="footer__block">
+            <div class="footer__item">
               <div class="footer__logo">
                 <img
                   src="./img/TON Logo.png"
@@ -212,12 +214,13 @@
                   <a href="#">About project</a>
                 </li>
               </ul>
-              <div>
-                <p>© 2077 Untitled UI. All rights reserved.</p>
-              </div>
+              <p class="footer__text">
+                © 2077 Untitled UI. All rights reserved.
+              </p>
             </div>
           </div>
-        </footer>
+        </div>
+      </footer>
       <!-- #endregion -->
     </div>
   </body>
