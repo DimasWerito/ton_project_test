@@ -353,8 +353,8 @@ h6 {
 
 /* #region Footer */
 .footer {
- display: flex;
- margin: 0 auto;
+  display: flex;
+  margin: 0 auto;
 }
 
 .footer__row {
@@ -404,6 +404,7 @@ h6 {
 }
 /* #endregion */
 
+/* #region Popup Form*/
 .popup {
   margin: 0 auto;
   display: none;
@@ -492,7 +493,9 @@ h6 {
   color: var(--gray-gray-0);
   margin-left: 8px;
 }
+/* #endregion */
 
+/* #region Order Form */
 .popup__oder {
   display: none;
 }
@@ -512,3 +515,4 @@ h6 {
 }
 .popup__signUp {
 }
+/* #endregion */
