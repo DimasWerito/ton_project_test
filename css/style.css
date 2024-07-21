@@ -345,6 +345,10 @@ h6 {
   width: 562px;
   height: 104px;
 }
+
+.bot__title > img {
+  cursor: pointer;
+}
 /* #endregion */
 
 /* #region Footer */
@@ -352,17 +356,6 @@ h6 {
  display: flex;
  margin: 0 auto;
 }
-
-/* .footer__line::before {
-  content:" ";
-  display: block;
-  height: 1.5px;
-  width: 1437.5px;
-  position: absolute;
-  margin: 0 241.5px;
-  font-family: var(--font-family);
-  background: var(--gray-gray-400);
-} */
 
 .footer__row {
   display: flex;
@@ -394,7 +387,7 @@ h6 {
   margin-bottom: 32px;
 }
 
-.footer__list > li > a  {
+.footer__list > li > a {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 20px;
@@ -410,3 +403,112 @@ h6 {
   color: var(--gray-gray-400);
 }
 /* #endregion */
+
+.popup {
+  margin: 0 auto;
+  display: none;
+  /* Todo  logic to call JS*/
+}
+
+.popup__body {
+  border-radius: 21px;
+  padding: 32px;
+  width: 712px;
+  height: 572px;
+  background: var(--gray-gray-0);
+  display: flex;
+}
+
+.popup__content {
+  width: 648px;
+  height: 508px;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.popup__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 108%;
+  color: var(--gray-gray-900);
+  margin-bottom: 16px;
+}
+
+.popup__title > span {
+  background: linear-gradient(134deg, #4891fd 0%, #65b8fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.popup__form {
+}
+
+.popup__item {
+  width: 648px;
+  height: 88px;
+  margin-top: 16px;
+}
+
+.popup__item > p {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-gray-900);
+  margin-bottom: 8px;
+}
+
+.popup__input {
+  border-radius: 4px;
+  padding: 18px 20px;
+  width: 648px;
+  height: 58px;
+  background: var(--gray-gray-100);
+}
+
+.popup__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 56px;
+  padding: 18px 32px;
+  width: 648px;
+  height: 68px;
+  background: var(--blue-primary-blue);
+  margin-top: 32px;
+}
+
+.popup__btn > p {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--gray-gray-0);
+  margin-left: 8px;
+}
+
+.popup__oder {
+  display: none;
+}
+.oder__body {
+}
+.oder__content {
+}
+.oder__row {
+}
+.oder__icon {
+}
+.oder__text {
+}
+.oder__image {
+}
+.image__first {
+}
+.popup__signUp {
+}
