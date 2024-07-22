@@ -239,6 +239,16 @@ h6 {
   justify-content: space-between;
 }
 
+.trading__follower:nth-child(2) {
+  position: relative;
+  right: 30px;
+}
+
+.trading__follower:nth-child(3) {
+  position: relative;
+  right: 60px;
+}
+
 .trading__video {
   width: 766px;
   height: 492px;
@@ -285,6 +295,22 @@ h6 {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 40px;
+}
+
+.start__item {
+  position: relative;
+}
+
+.start__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 188.75px;
+  top: 31px;
+  right: 0;
+  width: 311px;
+  height: 1px;
+  stroke-width: 2px;
+  background-color: var(--Gray-Gray-400, #cacaca);
 }
 
 .start__subtitle {
