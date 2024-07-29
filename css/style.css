@@ -331,7 +331,7 @@ h6 {
   position: relative;
 }
 
-.start__item:not(:last-child)::after {
+/* .start__item:not(:last-child)::after {
   content: "";
   position: absolute;
   left: 188.75px;
@@ -340,7 +340,7 @@ h6 {
   width: 311px;
   border-top: 1px dashed var(--Gray-Gray-400, #cacaca);
   border-width: 2px;
-}
+} */
 
 .start__subtitle {
   font-family: var(--font-family);
@@ -358,8 +358,9 @@ h6 {
   font-size: 24px;
   line-height: 133%;
   color: var(--gray-gray-900);
-  width: 316px;
+  max-width: 316px;
   height: 168px;
+  word-wrap: break-word;
 }
 /* #endregion */
 
@@ -645,5 +646,116 @@ h6 {
 @media (max-width: 1440px) {
   .trading__title {
     font-size: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .trading__row {
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+  }
+
+  .trading__block {
+    margin-right: 0px; 
+    padding: 0 25px;
+  }
+
+  .trading__button-group {
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  .trading__title {
+    text-align: center;
+  }
+
+  .trading__text {
+    text-align: center;
+  }
+
+  .start__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-content: center;
+  }
+  
+  .bot__row {
+    margin-top: 100px;
+  }
+
+  .start__title {
+    text-align: center;
+  }
+
+  .start__title-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__logo_button {
+    display: none;
+  }
+
+  .header__row {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  .btn-mobile {
+    display: block;
+  }
+
+  .start__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .bot__row {
+    margin-top: 300px;
+  }
+
+  .start__icon {
+    position: relative;
+  }
+
+  .icon {
+    position: absolute;
+    left: -80px;
+    top: 20px;
+  }
+  
+  .start__subtitle {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 430px)  {
+  .start__block {
+    padding-left: 100px;
+  }
+
+  .bot__row {
+    margin-top: 400px;
+  }
+
+  .start__item-text {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+@media (max-width: 375px)  {
+  .bot__row {
+    margin-top: 550px;
+  }
+
+  .start__item-text {
+    margin-bottom: 70px;
   }
 }
