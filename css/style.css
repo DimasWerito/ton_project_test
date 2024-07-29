@@ -149,7 +149,6 @@ h6 {
   margin-bottom: 72px;
 }
 
-
 .header__logo > img {
   width: 105px;
   height: 40px;
@@ -282,7 +281,6 @@ h6 {
   border-radius: 12px;
 }
 
-
 /* #endregion */
 
 /* #region Start */
@@ -404,7 +402,7 @@ h6 {
   height: 104px;
 }
 
-.bot__button  {
+.bot__button {
   cursor: pointer;
 }
 
@@ -413,7 +411,6 @@ h6 {
   max-width: 1424px;
   height: auto;
 }
-
 
 /* #endregion */
 
@@ -641,7 +638,6 @@ h6 {
   color: var(--gray-gray-0);
 }
 /* #endregion */
-
 
 @media (max-width: 1440px) {
   .trading__title {
