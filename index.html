@@ -62,11 +62,11 @@
                     <p>Name</p>
                     <input
                       type="text"
-                      name="Name"
+                      name="name"
                       placeholder="Ваше имя"
                       required
                       tabindex="1"
-                      class="popup__input"
+                      class="popup__input validate"
                     />
                   </div>
                   <div class="popup__item">
@@ -75,9 +75,8 @@
                       type="email"
                       name="email"
                       placeholder="Email..."
-                      class="popup__input"
+                      class="popup__input validate"
                       tabindex="2"
-                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                       required
                       title="Введите корректный e-mail"
                     />
@@ -86,12 +85,11 @@
                     <p>Phone</p>
                     <input
                       type="tel"
-                      name="Number"
+                      name="phone"
                       placeholder="Ваш номер телефона"
                       required
                       tabindex="3"
-                      class="popup__input"
-                      onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+                      class="popup__input validate"
                     />
                   </div>
                   <button type="submit" class="popup__btn">
