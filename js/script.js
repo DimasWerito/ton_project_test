@@ -1,89 +1,132 @@
-const btnPopUpForm = document.querySelector(".popup__body");
-const popUpRow = document.querySelector('.popup__row');
-const oderBody = document.querySelector('.oder__body');
-const oderRow = document.querySelector('.oder__row');
-const validateInputs = document.querySelectorAll(".validate");
+document.addEventListener("DOMContentLoaded", () => {
+  const btnPopUpForm = document.querySelector(".popup__body");
+  const popUpRow = document.querySelector(".popup__row");
+  const oderBody = document.querySelector(".oder__body");
+  const oderRow = document.querySelector(".oder__row");
+  const validateInputs = document.querySelectorAll(".validate");
 
-function onClickOpenForm() {
-  const btnTryNow = document.querySelectorAll(".btn-try-now");
-  for (let i = 0; i < btnTryNow.length; i++) {
-    btnTryNow[i].addEventListener("click", (event) => {
-      popUpRow.classList.add("isActive");
-      btnPopUpForm.classList.add("isActive");
+  function onClickOpenForm() {
+    const btnTryNow = document.querySelectorAll(".btn-try-now");
+    btnTryNow.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        let finalSum = 0;
+        const intervalId = showToastMessage((sum) => (finalSum = sum));
+        
+        setTimeout(() => {
+          displayProfitAndTogglePopup(intervalId, finalSum);
+        }, 4000);
+      });
     });
   }
-}
-onClickOpenForm();
 
-function onClickCloseForm() {
-    const btnCloseForm = document.querySelector(".popup__close-form");
-    btnCloseForm.addEventListener("click", (event) => {
-      removeActiveClassFromPopUpBtn();
-      validateInputs.forEach(input => {
-        input.classList.remove("error");
-        input.value = '';
-      });
-    })
-}
-onClickCloseForm();
-
-function validateForm() {
-  const pattern = {
-    name: /^[a-zA-Zа-яА-Я]{3,}$/,
-    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    phone: /^\+?[\d\s-]{10,15}$/,
-  };
-  let isValid = true
-
-  const validateField = (field) => {      
-    if (pattern[field.name] && !pattern[field.name].test(field.value)) {        
-      field.classList.add("error");
-      isValid = false;
-    } else {
-      field.classList.remove("error");
-    }
+  function displayProfitAndTogglePopup(intervalId, finalSum) {
+    clearInterval(intervalId);
+    document.querySelector(".popup__profit").textContent = `Your profit could be ${finalSum}$`;
+    togglePopup(true);
   }
 
-  for (let i = 0; i < validateInputs.length; i++) {
-    validateInputs[i].addEventListener("blur", (event) => validateField(event.target));
-    validateInputs[i].addEventListener("input", (event) => validateField(event.target));
+  function onClickCloseForm() {
+    document.querySelector(".popup__close-form").addEventListener("click", () => {
+      togglePopup(false);
+      resetValidationInputs();
+    });
   }
-   validateInputs.forEach(input => validateField(input));
 
-  return isValid;
-}
+  function onClickSendForm() {
+    document.querySelector(".popup__btn").addEventListener("click", (event) => {
+      event.preventDefault();
+      if (validateForm()) {
+        notifySuccessSendForm();
+      }
+    });
+  }
 
-function onClickSendForm() {
-  console.log('come');
-  
-  const btnSendForm = document.querySelector(".popup__btn");
-  btnSendForm.addEventListener("click", (event) => {
-    event.preventDefault();
-    if (validateForm()) {
-      // TODO: logic sending form
-      notifySuccessSendFrom();
-    }
-  })
-}
-onClickSendForm();
+  function onClickOderClose() {
+    document.querySelector(".oder__close").addEventListener("click", () => {
+      toggleOder(false);
+    });
+  }
 
+  function togglePopup(isActive) {
+    popUpRow.classList.toggle("isActive", isActive);
+    btnPopUpForm.classList.toggle("isActive", isActive);
+  }
 
-function notifySuccessSendFrom() {
-  removeActiveClassFromPopUpBtn();
-  oderBody.classList.add("isActive");
-  oderRow.classList.add("isActive");
-}
+  function toggleOder(isActive) {
+    oderBody.classList.toggle("isActive", isActive);
+    oderRow.classList.toggle("isActive", isActive);
+  }
 
-function removeActiveClassFromPopUpBtn() {
-  popUpRow.classList.remove("isActive");
-  btnPopUpForm.classList.remove("isActive");
-}
+  function resetValidationInputs() {
+    validateInputs.forEach((input) => {
+      input.classList.remove("error");
+      input.value = "";
+    });
+  }
 
-function onClickOderClose() {
-  const oderClose = document.querySelector('.oder__close');
-  oderClose.addEventListener("click", (event) => {
-    oderBody.classList.remove("isActive");
-    oderRow.classList.remove("isActive");
-  })
-}
-onClickOderClose();
+  function validateForm() {
+    const patterns = {
+      name: /^[a-zA-Zа-яА-Я]{3,}$/,
+      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      phone: /^\+?[\d\s-]{10,15}$/,
+    };
+
+    let isValid = true;
+
+    const validateField = (field) => {
+      const pattern = patterns[field.name];
+      if (pattern && !pattern.test(field.value)) {
+        field.classList.add("error");
+        isValid = false;
+      } else {
+        field.classList.remove("error");
+      }
+    };
+
+    validateInputs.forEach((input) => {
+      input.addEventListener("blur", () => validateField(input));
+      input.addEventListener("input", () => validateField(input));
+      validateField(input);
+    });
+
+    return isValid;
+  }
+
+  function notifySuccessSendForm() {
+    togglePopup(false);
+    toggleOder(true);
+  }
+
+  function showToastMessage(sumCallback) {
+    let sum = 0;
+    const randomNumber = 99;
+    const chart  = document.getElementById("chart");
+    chart.scrollIntoView({ block: "center", behavior: "smooth" });
+    const intervalId = setInterval(() => {
+      const randomInteger = Math.floor(Math.random() * randomNumber);
+      sum += randomInteger;
+      sumCallback(sum);
+
+      Toastify({
+        text: `Your current profit ${randomInteger}$`,
+        duration: 1000,
+        newWindow: true,
+        className: "toast-message",
+        close: false,
+        gravity: "top",
+        position: "center",
+        stopOnFocus: true,
+        style: {
+          background: 'green',
+        },
+      }).showToast();
+    }, 700);
+
+    return intervalId;
+  }
+
+  onClickOpenForm();
+  onClickCloseForm();
+  onClickSendForm();
+  onClickOderClose();
+});
